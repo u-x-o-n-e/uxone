@@ -1,23 +1,41 @@
 {
-  "name": "UXONE",
+  "name": "UXONE - Diseño y Desarrollo Web Profesional",
   "short_name": "UXONE",
+  "description": "Expertos en diseño y desarrollo web profesional. Creamos experiencias digitales únicas y soluciones web innovadoras.",
   "icons": [
     {
-      "src": "/android-chrome-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "/android-chrome-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png"
+      "src": "/src/assets/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
     }
   ],
-  "theme_color": "#ffffff",
+  "theme_color": "#1877f2",
   "background_color": "#ffffff",
   "display": "standalone",
-  "start_url": "/",
-  "description": "Expertos en diseño y desarrollo web profesional",
   "orientation": "portrait",
-  "lang": "es-ES"
+  "scope": "/",
+  "start_url": "/",
+  "lang": "es-ES",
+  "dir": "ltr",
+  "prefer_related_applications": false,
+  "categories": ["business", "productivity", "utilities"],
+  "screenshots": [
+    {
+      "src": "/src/assets/logo.svg",
+      "sizes": "1280x720",
+      "type": "image/svg+xml",
+      "platform": "wide",
+      "label": "UXONE - Diseño y Desarrollo Web"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Inicio",
+      "url": "/",
+      "description": "Ir a la página principal"
+    }
+  ],
+  "related_applications": [],
+  "iarc_rating_id": "e84b072d-71b3-4d3e-86ae-31a8ce4e53b7"
 } 
