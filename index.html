@@ -1,12 +1,133 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="es">
   <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="/uxone/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vite App</title>
-    <script type="module" crossorigin src="/uxone/assets/index-D9L6Vm-h.js"></script>
-    <link rel="stylesheet" crossorigin href="/uxone/assets/index-BeO5LtFn.css">
+    <title>Uxone Web - Diseño y Desarrollo de Experiencia Única</title>
+    <meta name="description" content="UXONE: Expertos en diseño web y desarrollo de aplicaciones. Dashboard moderno, rápido y optimizado para gestionar tu experiencia digital. Comparte fácilmente en WhatsApp, Instagram, Facebook, Twitter y más.">
+    <meta name="keywords" content="UXONE, diseño web, desarrollo web, aplicaciones web, dashboard, experiencia de usuario, UI, UX, moderno, compartir, WhatsApp, Instagram, Facebook, Twitter, SEO, GitHub Pages, analítica, accesibilidad, PWA">
+    <meta name="author" content="UXONE">
+    <meta name="copyright" content="2025 UXONE">
+    <meta name="language" content="Spanish">
+    <meta name="distribution" content="global">
+    <meta name="rating" content="general">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="theme-color" content="#1a202c">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <!-- Favicon y Apple Touch Icon -->
+    <link rel="icon" href="/uxone/logo.svg" type="image/svg+xml">
+    <link rel="icon" type="image/png" sizes="512x512" href="/logo-uxone.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/logo-uxone.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://u-x-o-n-e.github.io/uxone/">
+
+    <!-- Open Graph / Facebook / Instagram / WhatsApp -->
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://u-x-o-n-e.github.io/uxone/">
+    <meta property="og:title" content="UXONE - Diseño y Desarrollo Web de Experiencia Única">
+    <meta property="og:description" content="Expertos en diseño web y desarrollo de aplicaciones. Lleva tu experiencia digital al siguiente nivel con UXONE.">
+    <meta property="og:image" content="https://u-x-o-n-e.github.io/uxone/logo-uxone.png">
+    <meta property="og:image:alt" content="Logo UXONE - Diseño y Desarrollo Web">
+    <meta property="og:site_name" content="UXONE">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://u-x-o-n-e.github.io/uxone/">
+    <meta name="twitter:title" content="UXONE - Diseño y Desarrollo Web de Experiencia Única">
+    <meta name="twitter:description" content="Expertos en diseño web y desarrollo de aplicaciones. Lleva tu experiencia digital al siguiente nivel con UXONE.">
+    <meta name="twitter:image" content="https://u-x-o-n-e.github.io/uxone/logo-uxone.png">
+    <meta name="twitter:image:alt" content="Logo UXONE - Diseño y Desarrollo Web">
+    <meta name="twitter:site" content="@TuUsuarioTwitter">
+    <meta name="twitter:creator" content="@TuUsuarioTwitter">
+
+    <!-- Manifest para PWA -->
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- Accesibilidad -->
+    <meta name="msapplication-TileColor" content="#1a202c">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+
+    <!-- Preload recursos críticos -->
+    <link rel="preload" as="image" href="/logo-uxone.png" type="image/png">
+    <link rel="preload" as="image" href="/uxone/logo.svg" type="image/svg+xml">
+
+    <!-- Schema.org JSON-LD: WebSite + Organization + Breadcrumb + Service -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "UXONE",
+      "url": "https://u-x-o-n-e.github.io/uxone/",
+      "description": "Expertos en diseño web y desarrollo de aplicaciones. Dashboard moderno y optimizado para compartir en todas tus redes sociales.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "UXONE",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://u-x-o-n-e.github.io/uxone/logo-uxone.png"
+        }
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://u-x-o-n-e.github.io/uxone/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "UXONE",
+      "url": "https://u-x-o-n-e.github.io/uxone/",
+      "logo": "https://u-x-o-n-e.github.io/uxone/logo-uxone.png",
+      "sameAs": [
+        "https://www.facebook.com/UXONE",
+        "https://twitter.com/TuUsuarioTwitter",
+        "https://www.instagram.com/UXONE",
+        "https://wa.me/XXXXXXXXXXX"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://u-x-o-n-e.github.io/uxone/"
+      }]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Diseño web y desarrollo de aplicaciones web",
+      "provider": {
+        "@type": "Organization",
+        "name": "UXONE",
+        "url": "https://u-x-o-n-e.github.io/uxone/"
+      },
+      "areaServed": "Global",
+      "description": "Servicios profesionales de diseño web, desarrollo de aplicaciones web, experiencia de usuario (UX) y soluciones digitales modernas."
+    }
+    </script>
+    <script type="module" crossorigin src="/uxone/assets/index-CuZcOJhZ.js"></script>
+    <link rel="stylesheet" crossorigin href="/uxone/assets/index-DYjXNeD7.css">
   </head>
   <body>
     <div id="app"></div>
