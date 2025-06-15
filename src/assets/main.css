@@ -675,6 +675,43 @@ body {
   box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
 }
 
+/* Nueva clase para el botón "Ver en vivo" */
+.btn-ver-en-vivo {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--white);
+  border: none;
+  padding: 5px 5px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  font-size: 16px;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  outline: none;
+}
+.btn-ver-en-vivo:hover {
+  text-decoration: none;
+  background: rgba(255,255,255,0.2);
+  color: var(--white);
+  transform: none;
+  box-shadow: none;
+}
+/* Efecto de filtro oscuro y borroso a la imagen al hacer hover en el botón */
+.project-card:hover .project-image,
+.project-card .btn-ver-en-vivo:hover ~ .project-image,
+.project-card .btn-ver-en-vivo:focus ~ .project-image {
+  filter: brightness(0.6) blur(2px);
+  transition: filter 0.3s;
+}
+
+/* Alternativa para asegurar el efecto cuando el botón está sobre la imagen */
+.project-card .project-overlay:hover ~ .project-image,
+.project-card .btn-ver-en-vivo:hover ~ .project-image {
+  filter: brightness(0.6) blur(2px);
+}
+
 /* Servicios */
 .services {
   padding: 100px 0;
@@ -994,7 +1031,7 @@ body {
 .footer-links a {
   color: var(--text-color);
   text-decoration: none;
-  transition: var(--transition);
+  transition: var (--transition);
   position: relative;
   padding-left: 0;
 }
@@ -1165,43 +1202,6 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--darker-bg);
-    opacity: 0;
-    transition: var(--transition);
-  }
-  .hero h1:hover::before {
-    opacity: 0.5;
-    left: 2px;
-    text-shadow: -2px 0 var(--primary-color);
-    clip: rect(44px, 450px, 56px, 0);
-    animation: glitch-anim 0.3s infinite linear alternate-reverse;
-  }
-  .hero h1:hover::after {
-    opacity: 0.5;
-    left: -2px;
-    text-shadow: 2px 0 var(--accent-color);
-    clip: rect(44px, 450px, 56px, 0);
-    animation: glitch-anim2 0.3s infinite linear alternate-reverse;
-  }
-
-  .services-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .service-card {
-    padding: 1.5rem;
-    box-shadow: none;
-    backdrop-filter: none;
-  }
-
-  .service-icon {
-    width: 50px;
-    height: 50px;
-  }
-
-  .service-card:hover {
-    box-shadow: none;
     border-color: var(--primary-color);
   }
 
@@ -1387,7 +1387,7 @@ body {
   font-family: 'ClashDisplay', sans-serif;
   font-size: clamp(1.2rem, 6vw, 2.5rem);
   font-weight: 700;
-  color: var(--white);
+  color: var (--white);
   display: flex;
   align-items: center;
   gap: clamp(0.3rem, 2vw, 1rem);
@@ -1636,4 +1636,17 @@ body {
 .project-tag i {
   margin-right: 0.5rem;
   font-size: 1rem;
+}
+
+.footer-uxone {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.footer-ux {
+  color: #1877f2;
+  font-weight: 700;
+}
+.footer-one {
+  color: #fff;
+  font-weight: 700;
 }
