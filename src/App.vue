@@ -1,6 +1,15 @@
 <script setup>
 import { ref, onMounted, watch } from 'vue'
+import logoUxone from './assets/logo-uxone.png'
 
+// Importa las imágenes de proyectos
+import project1 from './assets/images/Proyecto-StudyLoop.png'
+/*import project2 from './assets/images/proyecto-dashboard.png'
+import project3 from './assets/images/proyecto-corporativo.png'
+import project4 from './assets/images/proyecto-gestion.png'
+import project5 from './assets/images/proyecto-reservas.png'
+import project6 from './assets/images/proyecto-blog.png'
+*/
 const isMobileMenuOpen = ref(false)
 const currentYear = new Date().getFullYear()
 const isLoading = ref(true)
@@ -137,7 +146,9 @@ onMounted(() => {
     <!-- Navegación -->
     <nav class="navbar">
       <div class="container nav-content">
-        <a href="#" class="logo" data-text="UXone">UXONE</a>
+        <a href="#" class="logo" data-text="uxone">
+          <img :src="logoUxone" alt="UXONE Logo" class="logo-img" height="35" width="auto" />
+        </a>
         <button class="mobile-menu-btn" :class="{ active: isMobileMenuOpen }" @click="toggleMobileMenu">
           <span></span>
           <span></span>
@@ -158,8 +169,8 @@ onMounted(() => {
     <section id="home" class="hero">
       <div class="stars"></div>
       <div class="container">
-        <h1 data-text="Inicio">DISEÑO WEB</h1>
-        <p class="subtitle">Transformamos ideas en experiencias digitales memorables</p>
+        <h1 data-text="DISEÑO WEB" class="helvetica-heavy">DISEÑO WEB</h1>
+        <p class="subtitle">Transformamos ideas en experiencias digitales Extraordinarias</p>
         <div class="hero-buttons">
           <a href="#footer" class="btn btn-primary">Comenzar Proyecto</a>
           <a href="#projects" class="btn btn-secondary">Ver Proyectos</a>
@@ -219,7 +230,7 @@ onMounted(() => {
     </section>
 
     <!-- Technologies Carousel -->
-    <section class="technologies">
+    <section id="tecnologias" class="technologies">
       <div class="container">
         <h2 class="section-title">Tecnologías</h2>
         <div class="tech-carousel">
@@ -284,20 +295,20 @@ onMounted(() => {
         <h2 class="section-title">Nuestros Proyectos</h2>
         <div class="projects-grid">
           <div class="project-card">
-            <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" alt="Proyecto 1" class="project-image">
+            <img :src="project1" alt="Proyecto StudyLoop" class="project-image">
             <div class="project-overlay">
-              <h3 class="project-title">E-commerce Moderno</h3>
-              <p class="project-description">Tienda online con diseño moderno y experiencia de usuario optimizada.</p>
+              <h3 class="project-title">EstudyLoop</h3>
+              <p class="project-description">App web para estudiantes, manejar y organizar sus tareas y apuntes.</p>
               <div class="project-tags">
                 <span class="project-tag"><i class="fab fa-vuejs"></i> Vue.js</span>
-                <span class="project-tag"><i class="fab fa-laravel"></i> Laravel</span>
                 <span class="project-tag"><i class="fab fa-figma"></i> Figma</span>
               </div>
-              <a href="#" class="btn btn-primary project-btn">Ver en vivo</a>
+              <a href="https://u-x-o-n-e.github.io/Focus-App/" class="btn-ver-en-vivo">Ver en vivo</a>
             </div>
           </div>
+          <!--
           <div class="project-card">
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1115&q=80" alt="Proyecto 2" class="project-image">
+            <img :src="project2" alt="Proyecto Dashboard Analytics" class="project-image">
             <div class="project-overlay">
               <h3 class="project-title">Dashboard Analytics</h3>
               <p class="project-description">Panel de control con visualización de datos en tiempo real.</p>
@@ -306,11 +317,11 @@ onMounted(() => {
                 <span class="project-tag"><i class="fab fa-vite"></i> Vite</span>
                 <span class="project-tag"><i class="fab fa-css3-alt"></i> Tailwind</span>
               </div>
-              <a href="#" class="btn btn-primary project-btn">Ver en vivo</a>
+              <a href="#" class="btn-ver-en-vivo">Ver en vivo</a>
             </div>
           </div>
           <div class="project-card">
-            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="Proyecto 3" class="project-image">
+            <img :src="project3" alt="Proyecto Portal Corporativo" class="project-image">
             <div class="project-overlay">
               <h3 class="project-title">Portal Corporativo</h3>
               <p class="project-description">Sitio web corporativo con diseño moderno y responsive.</p>
@@ -319,12 +330,11 @@ onMounted(() => {
                 <span class="project-tag"><i class="fab fa-vuejs"></i> Vue.js</span>
                 <span class="project-tag"><i class="fab fa-figma"></i> Figma</span>
               </div>
-              <a href="#" class="btn btn-primary project-btn">Ver en vivo</a>
+              <a href="#" class="btn-ver-en-vivo">Ver en vivo</a>
             </div>
           </div>
-          <!-- Hidden Projects -->
           <div class="project-card hidden-project">
-            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Proyecto 4" class="project-image">
+            <img :src="project4" alt="Proyecto Sistema de Gestión" class="project-image">
             <div class="project-overlay">
               <h3 class="project-title">Sistema de Gestión</h3>
               <p class="project-description">Plataforma integral para gestión empresarial.</p>
@@ -333,11 +343,11 @@ onMounted(() => {
                 <span class="project-tag"><i class="fab fa-vuejs"></i> Vue.js</span>
                 <span class="project-tag"><i class="fab fa-php"></i> PHP</span>
               </div>
-              <a href="#" class="btn btn-primary project-btn">Ver en vivo</a>
+              <a href="#" class="btn-ver-en-vivo">Ver en vivo</a>
             </div>
           </div>
           <div class="project-card hidden-project">
-            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Proyecto 5" class="project-image">
+            <img :src="project5" alt="Proyecto App de Reservas" class="project-image">
             <div class="project-overlay">
               <h3 class="project-title">App de Reservas</h3>
               <p class="project-description">Sistema de reservas online con calendario integrado.</p>
@@ -346,11 +356,11 @@ onMounted(() => {
                 <span class="project-tag"><i class="fab fa-vite"></i> Vite</span>
                 <span class="project-tag"><i class="fab fa-js"></i> JavaScript</span>
               </div>
-              <a href="#" class="btn btn-primary project-btn">Ver en vivo</a>
+              <a href="#" class="btn-ver-en-vivo">Ver en vivo</a>
             </div>
           </div>
           <div class="project-card hidden-project">
-            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Proyecto 6" class="project-image">
+            <img :src="project6" alt="Proyecto Blog Personal" class="project-image">
             <div class="project-overlay">
               <h3 class="project-title">Blog Personal</h3>
               <p class="project-description">Blog moderno con sistema de comentarios y categorías.</p>
@@ -359,12 +369,13 @@ onMounted(() => {
                 <span class="project-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
                 <span class="project-tag"><i class="fab fa-js"></i> JavaScript</span>
               </div>
-              <a href="#" class="btn btn-primary project-btn">Ver en vivo</a>
+              <a href="#" class="btn-ver-en-vivo">Ver en vivo</a>
             </div>
           </div>
         </div>
         <div class="projects-more">
           <button class="btn btn-secondary" id="showMoreProjects">Ver más proyectos</button>
+        -->
         </div>
       </div>
     </section>
@@ -376,18 +387,18 @@ onMounted(() => {
         <div class="about-content">
           <div class="about-text">
             <h3>Transformando Ideas en Experiencias Digitales Extraordinarias</h3>
-            <p>En UXONE, somos un equipo apasionado de diseñadores y desarrolladores que creamos soluciones digitales innovadoras. Nuestra misión es transformar tu visión en una experiencia digital memorable que cautive a tu audiencia.</p>
+            <p>En UXONE, somos un equipo apasionado de diseñadores y desarrolladores que creamos soluciones digitales innovadoras. Nuestra misión es transformar tu visión en una experiencia digital memorable que cautive a tus clientes.</p>
             <div class="about-stats">
               <div class="stat-item">
-                <span class="stat-number">5+</span>
+                <span class="stat-number">2+</span>
                 <span class="stat-label">Años de Experiencia</span>
               </div>
               <div class="stat-item">
-                <span class="stat-number">100+</span>
+                <span class="stat-number">20+</span>
                 <span class="stat-label">Proyectos Completados</span>
               </div>
               <div class="stat-item">
-                <span class="stat-number">50+</span>
+                <span class="stat-number">14+</span>
                 <span class="stat-label">Clientes Satisfechos</span>
               </div>
             </div>
@@ -404,7 +415,7 @@ onMounted(() => {
       <div class="container">
         <div class="footer-grid">
           <div>
-            <h3>UXOne</h3>
+            <h3><img :src="logoUxone" alt="UXONE Logo" class="logo-img" height="33" width="auto" /></h3>
             <p>Transformando ideas en experiencias digitales extraordinarias.</p>
             <div class="contact-info">
               <p><i class="fas fa-map-marker-alt"></i> Posadas, Misiones, Argentina</p>
@@ -423,9 +434,10 @@ onMounted(() => {
           <div>
             <h3>Tecnologías</h3>
             <ul class="footer-links">
-              <li><a href="#services">Laravel</a></li>
-              <li><a href="#services">Vue.js</a></li>
-              <li><a href="#services">Figma</a></li>
+              <li><a href="#tecnologias">Laravel</a></li>
+              <li><a href="#tecnologias">Vue.js</a></li>
+              <li><a href="#tecnologias">Figma</a></li>
+              <li><a href="#tecnologias">WordPress</a></li>
             </ul>
           </div>
           <div>
@@ -447,7 +459,14 @@ onMounted(() => {
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; {{ currentYear }} UXOne. Todos los derechos reservados.</p>
+          <p>
+            &copy; {{ currentYear }}
+            <span class="footer-uxone">
+              <span class="footer-ux">UX</span><span class="footer-one">ONE</span>
+              <sup>™</sup>
+            </span>
+            . Todos los derechos reservados.
+          </p>
         </div>
       </div>
     </footer>
@@ -683,5 +702,18 @@ onMounted(() => {
   .service-card p {
     font-size: 1rem;
   }
+}
+
+@font-face {
+  font-family: 'Helvetica Neue Heavy';
+  src: url('./assets/fonts/HelveticaNeueHeavy.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+.helvetica-heavy {
+  font-family: 'Helvetica Neue Heavy', 'ClashDisplay', sans-serif !important;
+  font-weight: 900 !important;
 }
 </style>
